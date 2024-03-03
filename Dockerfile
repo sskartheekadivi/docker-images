@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim
+FROM arm64v8/debian:bookworm-slim
 
 # packages setup
 RUN \
@@ -13,7 +13,7 @@ RUN echo "dash dash/sh boolean false" | debconf-set-selections
 RUN echo "Asia/Kolkata" | tee /etc/timezone
 RUN DEBIAN_FRONTEND=noninteractive dpkg-reconfigure dash
 
-RUN apt-get install -y debmake
+RUN apt-get install -y devscripts equivs debmake
 
 RUN export LC_ALL="en_US.UTF-8" && \
     export LC_CTYPE="en_US.UTF-8" && \
