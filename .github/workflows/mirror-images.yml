@@ -19,10 +19,10 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - source: "lavasoftware/lava-dispatcher:2025.04"
+          - source: "lavasoftware/lava-dispatcher:2026.04"
             target_name: "lava-dispatcher"
 
-          - source: "lavasoftware/lava-server:2025.04"
+          - source: "lavasoftware/lava-server:2026.04"
             target_name: "lava-server"
 
           - source: "debian:stable"
